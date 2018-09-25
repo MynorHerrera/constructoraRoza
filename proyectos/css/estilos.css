@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 90px;
+    background: black;
+    color: white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+header div img{
+    padding-top: 20px; 
+    width: 70%;
+    height: 70px;
+    margin-left: 5px;
+}
+
+.contenedor{
+    width: 90%;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    float: right;
+    font-size: 28px;
+    margin: 25px 0 0 0;
+    cursor: pointer;
+}
+
+.row{
+    position: relative;
+    margin-top: 30em;
+    z-index: -2;
+}
+
+.row p{
+    text-align: center;
+}
+
+.information h2{
+    text-align: center;
+    font-size: 24px;
+}
+
+.information p{
+    text-align: left;
+    font-size: 14px;
+}
+.row p{
+    text-align: center;
+}
+
+.menu{
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    background: black;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+.menu a{
+    display: block;
+    color: white;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid yellow;
+} 
+
+.menu a:hover{
+    background: yellow;
+    color: black;
+}
+
+#menu-bar:checked ~ .menu{
+    transform: translateX(0%);
+}
+
+/*Pie*/
+.pie{
+	background:black;
+	width: 100%;
+	color: white;
+	text-align: center;
+	border-top: 5px solid yellow;
+	padding: 5px 0 10px 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+}
+
+.pie small{
+	display: block;
+	padding: 1px;
+	font-size: 100%;
+}
+
+.information{
+    position: absolute;
+    padding: 5px 15px 5px 15px;
+    width: 100%;
+    height: 50px;
+    top: 12%;
+    text-align: center;
+    z-index: -1;
+}
+
+.information div{
+    border-bottom: 1px solid blue;
+    padding-top: 10px;
+}
+
+.fecha {
+    width: 60%;
+    height: 50px;
+    font-size: 18px;
+    
+}
+
+.enviar{
+    text-align: center;
+    width: 25%;
+    height: 50px;
+    background: #3F51B5;
+    font-size: 18px;
+    color: white;
+}
+
+@media screen and (min-width: 640px){
+
+    header label{
+        display: none;
+    }
+    header div img{
+        width: 50%;
+        height: 70px;
+        margin-left: 5px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .row{
+        position: relative;
+        margin-top: 30em;
+        z-index: -2;
+    }
+
+    .menu{
+        background: black;
+        z-index: 0;
+        height: 40px;
+        width: 30%;
+        transform: rotateX(0);
+        text-align: right;
+        width: 100%;
+        top: 55px;
+    }
+
+    .menu a{
+        display: inline;
+        color: white;
+        text-decoration: none;
+        padding: 15px;
+        border-bottom: 1px solid yellow;
+    }
+    .information{
+        padding: 5px 15px 5px 15px;
+        width: 100%;
+        height: 50px;
+        top: 25%;
+        margin-right: 15px;
+        z-index: -1;
+    }
+    .information h1{
+        position: absolute;
+        width: 30%;
+        top: 10%;
+    }
+
+    form{
+        display: inline;
+        padding-left: 50%;
+    }
+    
+    .fecha {
+        width: 25%;
+        height: 50px;
+        font-size: 18px;
+        z-index: 0;
+    }
+    
+    .enviar{
+        text-align: center;
+        width: 10%;
+        height: 50px;
+        background:grey;
+        font-size: 18px;
+        color: white;
+    }
+
+    .information h2{
+        text-align: left;
+        margin-left: 15%;
+    }
+
+    .information p{
+        text-align: left;
+        margin: 0 15% 0 15%;
+        font-size: 18px;
+    }
+    .row p{
+        text-align: center;
+    }
+}
